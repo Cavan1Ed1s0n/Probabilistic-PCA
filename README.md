@@ -1,1 +1,1 @@
-# Probabilistic-PCA
+# P-PCA
