@@ -14,7 +14,7 @@ $p(x|z) = \mathcal{N}(x|Wz + \mu, \sigma^2I)$
 
 $p(x)=\mathcal{N}(x|?)$
 
-$E[x] =E[Wz + \mu+ \epsilon]  = WE[z] + \mu+ E[\epsilon]  = \mu$
+$E[x] =E[Wz + \mu+ \epsilon] = WE[z] + \mu+ E[\epsilon] = \mu$
 
 $$
 \begin{align*}
@@ -26,7 +26,7 @@ Cov[x] &= E[(x - \mu)(x - \mu)^T]  \\
 \end{align*}
 $$
 
-Hence, $p(x) = \mathcal{N}(x|\mu, C)$.
+Suy ra, $p(x) = \mathcal{N}(x|\mu, C)$.
 
 $$
 \begin{align*}
@@ -38,6 +38,6 @@ $$
 
 Lấy đạo hàm
 
-$\sum_{n=1}^NC^{-1}(x_n - \mu)$ = 0 =>  $\mu = \frac{1}{N}\sum_{n=1}^Nx_n$
+$\sum_{n=1}^NC^{-1}(x_n - \mu) = 0 \Rightarrow \mu = \frac{1}{N}\sum_{n=1}^Nx_n$
 
- $\sum^2 = \frac{1}{D-M}\sum_{M+1}^D\lambda_j$                 
+ $\sum^2 = \frac{1}{D-M}\sum_{M+1}^D\lambda_j$
