@@ -4,39 +4,40 @@ Biến tiềm ẩn (latent variable) là biến không được quan sát trực
 
 Ví dụ độ hài lòng đối với cơ sở vật chất của nhà trường và giảng viên; mức độ thông minh qua điểm thi Toán Lý Hóa; hành vi của khách hàng qua cách họ chọn lựa và mua sản phẩm;...
 
-x = Wz + $\mu$ + ϵ
+$x = Wz + \mu + \epsilon$
 
-p(z) = N(z|0, I)
+$p(z) = \mathcal{N}(z|0, I)$
 
-p(ϵ) = N(ϵ|0, $\sigma^2$I)
+$p(\epsilon) = \mathcal{N}(\epsilon|0, \sigma^2I)$
 
-p(x|z) = N(x|Wz + $\mu$, $\sigma^2$I)
+$p(x|z) = \mathcal{N}(x|Wz + \mu, \sigma^2I)$
 
-p(x)=N(x|?)
+$p(x)=\mathcal{N}(x|?)$
 
-E[x] =E[Wz + $\mu$+ ϵ]  
-= WE[z] + $\mu$+ E[ϵ]  
-= $\mu$
+$E[x] =E[Wz + \mu+ \epsilon]  = WE[z] + \mu+ E[\epsilon]  = \mu$
 
-Cov[x] = E[$(x - \mu)(x - \mu)^T$]  
-= E[(Wz + ϵ)(Wz + ϵ)$^T$]  
-=E[Wzz$^T$W$^T$ + 2Wzϵ$^T$ + ϵ ϵ$^T$]  
-= WE[z zT] W$^T$ + 2WE[zϵ$^T$] +E[ϵϵ$^T$]  
-= WW$^T$ + $\sigma^2$I = C
+$$
+\begin{align*}
+Cov[x] &= E[(x - \mu)(x - \mu)^T]  \\
+&= E[(Wz + \epsilon)(Wz + \epsilon)^T]  \\
+&=E[Wzz^TW^T + 2Wz\epsilon^T + \epsilon\epsilon^T]  \\
+&= WE[zzT] W^T + 2WE[z\epsilon^T] +E[\epsilon\epsilon^T] \\  
+&= WW^T + \sigma^2I = C
+\end{align*}
+$$
 
-Hence, p(x) = N(x|μ, C)
+Hence, $p(x) = \mathcal{N}(x|\mu, C)$.
 
-
-
-ln p(X|μ, W, σ$^2$)  = $\Sigma_{n=1}^N lnp(x_n|μ, W, σ^2) 
-$  = $\Sigma_{n=1}^N ln N(x_n|μ, C)$
-
-                             = $\frac{-Nd}{2} ln(2\pi) - \frac{N}{2}ln|C| - \frac{1}{2}\Sigma_{n=1}^N (x_n-\mu)^TC^{-1}(x_n-\mu)     $                                                                                                                
-
-                                                                                                                                 [$x_n \in R^d$]
+$$
+\begin{align*}
+\ln p(X|\mu, W, \sigma^2)  &= \sum_{n=1}^N \ln p(x_n|\mu, W, \sigma^2)\\
+&= \sum_{n=1}^N \ln \mathcal{N}(x_n|\mu, C)\\
+& =\dfrac{-Nd}{2} \ln(2\pi) - \dfrac{N}{2}\ln{|C|} - \dfrac{1}{2}\sum_{n=1}^N (x_n-\mu)^TC^{-1}(x_n-\mu), \text{ with $x_n \in R^d$}
+\end{align*}
+$$
 
 Lấy đạo hàm
 
-$\Sigma_{n=1}^NC^{-1}(x_n - \mu)$ = 0 =>  $\mu = \frac{1}{N}\Sigma_{n=1}^Nx_n$
+$\sum_{n=1}^NC^{-1}(x_n - \mu)$ = 0 =>  $\mu = \frac{1}{N}\sum_{n=1}^Nx_n$
 
- $\sigma^2 = \frac{1}{D-M}\Sigma_{M+1}^D\lambda_j$                 
+ $\sum^2 = \frac{1}{D-M}\sum_{M+1}^D\lambda_j$                 
