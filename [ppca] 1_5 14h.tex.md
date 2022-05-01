@@ -10,7 +10,7 @@ Giả định về mô hình PPCA
 
 Mô hình tạo sinh:
 
-$x = Wz + \mu + \epsilon$
+![](https://render.githubusercontent.com/render/math?math=x = Wz + \mu + \epsilon)
 
 $\mu \in \R^D$ và continous latent variable $z \in \R^M$  với Gaussian prior
 
