@@ -1,6 +1,5 @@
 # PCA
 
-
 PCA phương pháp giảm chiều của bộ dữ liệu: tìm ra các principal component giữ lại nhiều thông tin của dữ liệu nhất. Các principal component được tìm ra được hiểu theo một nghĩa nào đó là latent variable
 
 Biến tiềm ẩn (latent variable) là biến không được quan sát trực tiếp mà phải qua các suy luận thống kê.
@@ -11,9 +10,9 @@ Giả định về mô hình PPCA
 
 Mô hình tạo sinh:
 
-$$
+```math
 x = Wz + \mu + \epsilon
-$$
+```
 
 $\mu \in \R^D$ và continous latent variable $z \in \R^M$  với Gaussian prior
 
